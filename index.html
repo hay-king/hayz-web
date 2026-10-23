@@ -21,14 +21,24 @@
       <radialGradient id="gWing" cx="40%" cy="30%" r="80%">
         <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset="1" stop-color="#cfe8ff" stop-opacity=".45"/>
       </radialGradient>
+      <radialGradient id="gWingTint" cx="40%" cy="30%" r="85%">
+        <stop offset="0" stop-color="#ffd2bd" stop-opacity=".95"/><stop offset="1" stop-color="#ff8a5c" stop-opacity=".7"/>
+      </radialGradient>
+      <pattern id="pWingStripe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+        <rect width="5" height="12" fill="#fff" opacity=".95"/>
+      </pattern>
       <linearGradient id="gStripe" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#3a2a1e"/><stop offset="1" stop-color="#1a110a"/>
       </linearGradient>
       <symbol id="bee" viewBox="0 0 200 180">
         <ellipse cx="100" cy="168" rx="52" ry="8" fill="#5a3a12" opacity=".18"/>
         <g class="wings">
-          <ellipse cx="72" cy="52" rx="30" ry="40" transform="rotate(-25 72 52)" fill="url(#gWing)" stroke="#fff" stroke-width="2"/>
-          <ellipse cx="128" cy="52" rx="30" ry="40" transform="rotate(25 128 52)" fill="url(#gWing)" stroke="#fff" stroke-width="2"/>
+          <ellipse cx="72" cy="52" rx="30" ry="40" transform="rotate(-25 72 52)" fill="url(#gWingTint)"/>
+          <ellipse cx="72" cy="52" rx="30" ry="40" transform="rotate(-25 72 52)" fill="url(#pWingStripe)"/>
+          <ellipse cx="72" cy="52" rx="30" ry="40" transform="rotate(-25 72 52)" fill="url(#gWing)" opacity=".35" stroke="#fff" stroke-width="3"/>
+          <ellipse cx="128" cy="52" rx="30" ry="40" transform="rotate(25 128 52)" fill="url(#gWingTint)"/>
+          <ellipse cx="128" cy="52" rx="30" ry="40" transform="rotate(25 128 52)" fill="url(#pWingStripe)"/>
+          <ellipse cx="128" cy="52" rx="30" ry="40" transform="rotate(25 128 52)" fill="url(#gWing)" opacity=".35" stroke="#fff" stroke-width="3"/>
         </g>
         <path d="M100 150 l-8 14 h16z" fill="#2b1d14"/>
         <ellipse cx="100" cy="112" rx="56" ry="46" fill="url(#gBody)"/>
