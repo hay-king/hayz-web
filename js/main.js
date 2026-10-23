@@ -21,8 +21,8 @@ document.querySelectorAll('.app-side a').forEach(a => a.addEventListener('click'
 }));
 
 // 로그인 모달 + 구글 로그인 (OAuth 2.0 승인 코드 흐름, GIS initCodeClient redirect 모드)
-// 백엔드 주소: 로컬 개발은 localhost:3000. 클라우드타입 배포 시 이 값과 GCP 승인 원본·리디렉션 URI를 함께 바꿉니다.
-const BACKEND_BASE = 'http://localhost:3000';
+// 백엔드 주소: 로컬 개발은 localhost:4320. 클라우드타입 배포 시 이 값과 GCP 승인 원본·리디렉션 URI를 함께 바꿉니다.
+const BACKEND_BASE = 'http://localhost:4320';
 const REDIRECT_URI = BACKEND_BASE + '/auth/google/callback';
 const modal = document.getElementById('login');
 const CLIENT_ID = document.querySelector('meta[name="google-client-id"]').content;
