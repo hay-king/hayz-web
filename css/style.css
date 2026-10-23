@@ -126,3 +126,10 @@ h2{font-size:clamp(1.6rem,3.4vw,2.5rem);font-weight:900;color:var(--brown-d);mar
 @media (max-width:860px){.hero{grid-template-columns:1fr;gap:40px;padding:56px 6vw 64px}.hero-text{max-width:none}.hero-visual{max-width:320px;margin:0 auto}.three{max-width:420px}:root{--sec:72px}}
 @media (max-width:520px){.bots{grid-auto-rows:auto}.bot{flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:14px}.bot .ico{margin:0}.bot h3{flex:1}.bot p{flex-basis:100%}.issues{grid-template-columns:1fr}.issue{padding-right:28px}.nav .btn-sm{padding:7px 12px;font-size:.85rem}:root{--sec:60px}}
 .issue-img:not(.issue-ph){object-position:center 45%}
+/* 한글 줄바꿈·텍스트 잘림 방지 */
+h1,h2,h3,p,.btn,.lead,.sub{word-break:keep-all;overflow-wrap:anywhere}
+h1{line-height:1.08}h1 span{line-height:1.35}
+.btn{white-space:nowrap;text-align:center}
+.no b{line-height:.95}
+img{max-width:100%}
+.hero-visual,.issue,.app-body{min-width:0}
