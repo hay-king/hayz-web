@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAYZ — AI 봇과 함께 일하는 메신저</title>
+  <meta name="description" content="여러 AI 봇을 대화방에 초대해 함께 일하는 HAYZ 메신저">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top"><span class="logo-dot"></span>HAYZ</a>
+    <nav>
+      <a href="#entry">진입점</a>
+      <a href="#features">기능</a>
+      <a class="btn btn-sm" href="#entry">시작하기</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">HAYDAY AI 메신저</p>
+        <h1>AI 봇 팀과<br>한 방에서 일하세요</h1>
+        <p class="lead">대화방에 AI 봇을 초대하면 일정·메일·업무·정산까지 함께 처리합니다. 중요한 실행은 언제나 승인 후에.</p>
+        <div class="cta">
+          <a class="btn" href="#entry">내 기기에 맞게 시작</a>
+          <a class="btn btn-ghost" href="#features">기능 둘러보기</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glow"></div>
+        <svg class="duck" viewBox="0 0 240 240">
+          <defs>
+            <radialGradient id="body" cx="40%" cy="35%" r="70%">
+              <stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#f3ede4"/><stop offset="1" stop-color="#d9cfc1"/>
+            </radialGradient>
+            <linearGradient id="bill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#f4a62a"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="120" cy="214" rx="70" ry="10" fill="#000" opacity=".12"/>
+          <path d="M60 150c0-38 28-62 60-62 10-34 54-34 62 0 6 26-10 40-18 46 30 6 46 30 40 54-6 26-36 36-82 36-40 0-62-30-62-74z" fill="url(#body)"/>
+          <ellipse cx="148" cy="62" rx="12" ry="5" fill="#cfc4b4"/>
+          <circle cx="146" cy="96" r="6" fill="#2b2622"/>
+          <circle cx="148" cy="94" r="2" fill="#fff"/>
+          <path d="M168 104c14-2 26 2 30 8-8 8-22 10-34 4z" fill="url(#bill)"/>
+          <path d="M90 156c18 14 46 14 60 2" stroke="#d9cfc1" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="bubble b1">회의록 정리했어요</div>
+        <div class="bubble b2">메일 초안 승인할까요?</div>
+      </div>
+    </section>
+
+    <section id="entry" class="section">
+      <h2>어디서든 같은 사무실</h2>
+      <p class="sub">세 가지 진입점, 하나의 HAYZ</p>
+      <div class="cards three">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+          <h3>데스크톱</h3>
+          <p>맥·윈도우 앱. 로컬 데이터와 키체인으로 안전하게, 가장 많은 기능을.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <h3>모바일</h3>
+          <p>이동 중에도 봇의 보고를 받고, 승인 한 번으로 일을 넘기세요.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
+          <h3>웹</h3>
+          <p>설치 없이 브라우저에서 바로. 어떤 기기에서든 사무실에 들어옵니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="section alt">
+      <h2>HAYZ가 하는 일</h2>
+      <div class="cards four">
+        <article class="feat"><h3>AI 봇 대화방</h3><p>여러 AI를 @멘션으로 불러 함께 답하고 일합니다.</p></article>
+        <article class="feat"><h3>메일·일정·업무</h3><p>메일함, 캘린더, 프로젝트와 업무를 봇이 정리합니다.</p></article>
+        <article class="feat"><h3>정산·거래처</h3><p>견적·계약·정산과 거래처 원장을 한곳에서.</p></article>
+        <article class="feat"><h3>사무실 연결·마켓</h3><p>다른 사무실과 봇을 공유하고 마켓에서 봇을 데려옵니다.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="logo"><span class="logo-dot"></span>HAYZ</div>
+    <p>© <span id="year"></span> HAYDAY. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
