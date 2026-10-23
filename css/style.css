@@ -165,3 +165,39 @@ img.issue-img{background:#6b4226}
 .app-img{border-radius:var(--r-img);box-shadow:0 10px 24px rgba(107,66,38,.18);background:#c19a6b}
 .ico-img{background:#e2c49c;box-shadow:0 0 0 3px #fffdf7,0 0 0 4px #efe3cf,0 6px 14px rgba(107,66,38,.18)}
 .issue .no{margin-top:2px}
+
+/* ===== 에디토리얼 플랫 스타일 (피그마 히어로 레퍼런스) ===== */
+.nav{background:#3b2414;backdrop-filter:none;padding-block:12px}
+.logo{font-size:1.25rem}
+.btn{box-shadow:none;font-weight:800}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.85)}
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px;align-items:stretch;min-height:680px;padding:0 0 0 var(--pad);
+background:linear-gradient(135deg,#a77a52 0%,#87583a 48%,#5e3a22 100%)}
+.hero-text{align-self:center;padding:88px 0 80px;max-width:560px}
+.kicker{font-size:.76rem;letter-spacing:.14em;opacity:.95}
+h1{font-size:clamp(3.4rem,7.4vw,6.2rem);margin:14px 0 14px}
+h1 span{font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:900}
+.lead{opacity:.9;font-size:1rem}
+.hero-no b{font-size:5rem}
+.hero-visual{align-self:end;justify-content:flex-end;height:100%;align-items:flex-end;overflow:hidden}
+.hero .todeogi-img{width:auto;max-width:100%;height:min(640px,100%);max-height:640px;aspect-ratio:var(--ratio-tall);object-fit:cover;object-position:center top;border-radius:0;box-shadow:none;background:none;
+-webkit-mask-image:radial-gradient(ellipse 70% 78% at 50% 62%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 70% 78% at 50% 62%,#000 55%,transparent 100%);margin-right:4vw}
+/* 플랫 섹션: 아이보리 바탕, 그림자 대신 얇은 선 */
+.section{background:var(--ivory)}
+.section.alt{background:#f3e8d6}
+.mag{background:#5e3a22}
+.bot,.card{background:#fffdf7;box-shadow:none;border:1px solid #e9dcc6;border-radius:16px}
+.bot:hover,.bot:focus-visible,.bot.on{box-shadow:none;transform:translateY(-2px)}
+.issue-img,.app-img,.app-shell{box-shadow:none}
+.issue-img{border-radius:12px}
+.app-shell{border-radius:16px}
+.label{letter-spacing:.2em}
+h2{letter-spacing:-.02em}
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);padding:0 6vw;row-gap:0;text-align:center}
+  .hero-text{padding:56px 0 24px;margin:0 auto}
+  .hero-visual{max-width:none;justify-content:center;height:auto}
+  .hero .todeogi-img{height:auto;width:min(420px,86vw);margin:0 auto}
+}
+@media (max-width:560px){.hero .todeogi-img{width:min(320px,88vw)}.hero-no b{font-size:4rem}}
+.hero .todeogi-img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(180deg,transparent 0,#000 30%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(180deg,transparent 0,#000 30%);mask-composite:intersect;height:min(680px,100%);max-height:680px;transform:scale(1.12);transform-origin:50% 100%}
