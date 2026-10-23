@@ -79,3 +79,5 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:8px;color:va
 
 .section.alt h2{color:#ff8a5c}
 .cell:focus-visible{outline:3px solid var(--brand)}
+.g-btn{display:inline-flex;align-items:center;gap:10px;padding:11px 20px;border-radius:999px;border:1px solid #dadce0;background:#fff;color:#3c4043;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.g-btn:hover{box-shadow:0 4px 12px rgba(0,0,0,.15)}
