@@ -201,3 +201,43 @@ h2{letter-spacing:-.02em}
 }
 @media (max-width:560px){.hero .todeogi-img{width:min(320px,88vw)}.hero-no b{font-size:4rem}}
 .hero .todeogi-img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(180deg,transparent 0,#000 30%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(180deg,transparent 0,#000 30%);mask-composite:intersect;height:min(680px,100%);max-height:680px;transform:scale(1.12);transform-origin:50% 100%}
+
+/* ---------- 2026-10-24: 선 아이콘 · 다운로드 · 모바일 메뉴 ---------- */
+.li{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.li-sm{width:18px;height:18px}
+.bot .ico{color:var(--brown-d,#3b2414)}
+.bot .ico .li{width:30px;height:30px}
+.card .icon{color:var(--brown-d,#3b2414);line-height:0}
+.card .icon .li{width:34px;height:34px}
+.card-link{color:inherit;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.card-link:hover{transform:translateY(-3px);border-color:#ff5b21}
+.tag{display:inline-block;margin-top:6px;padding:3px 10px;border-radius:999px;background:#efe3cf;color:#6b4226;font-size:.78rem;font-weight:700;vertical-align:middle}
+.tag.on{background:#ff5b21;color:#fff}
+h3 .tag{margin:0 0 0 6px;font-size:.72rem}
+.issue-shot{object-position:top center;background:#f1f1f3}
+/* 다운로드 */
+.cards.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px}
+.dl .card{align-items:stretch;text-align:center;gap:10px}
+.dl .card .icon{align-self:center}
+.dl .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:6px}
+.btn-ghost-dark{background:transparent;color:var(--brown-d,#3b2414);border:1.5px solid var(--brown-d,#3b2414)}
+.btn-ghost-dark:hover{background:var(--brown-d,#3b2414);color:#fff}
+.dl details{text-align:left;font-size:.86rem;color:var(--brown,#6b4226);margin-top:4px}
+.dl summary{cursor:pointer;font-weight:700}
+.dl details p{margin:6px 0 0;line-height:1.55}
+.sub.fine{max-width:720px;margin:22px auto 0;font-size:.86rem;opacity:.85}
+.app-side a{display:flex;align-items:center;gap:8px}
+.app-top-ico{display:inline-flex;gap:8px;align-items:center}
+/* 모바일 메뉴 */
+.nav-toggle{display:none;border:0;background:transparent;color:inherit;padding:4px;cursor:pointer;line-height:0}
+.nav-toggle .li{width:26px;height:26px}
+@media (max-width:860px){
+  .nav-toggle{display:block;margin-left:-4px}
+  .nav{gap:10px}
+  .nav .logo{margin-right:auto}
+  .nav nav{gap:10px}
+  .nav nav.open{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 16px;background:#3b2414}
+  .nav nav.open a:not(.btn){display:block;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav nav.open .btn-sm{margin-top:12px;text-align:center}
+  .cards.two{grid-template-columns:1fr}
+}

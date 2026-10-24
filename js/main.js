@@ -8,6 +8,16 @@ document.querySelectorAll('.app-side a').forEach(a => a.addEventListener('click'
   route.textContent = a.dataset.route;
 }));
 
+// 모바일 메뉴(햄버거): 열고 닫기, 링크를 누르면 닫힘
+const nav = document.getElementById('siteNav');
+const navBtn = document.querySelector('.nav-toggle');
+const setNav = (open) => { nav.classList.toggle('open', open); navBtn.setAttribute('aria-expanded', String(open)); navBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기'); };
+navBtn.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+
+// 웹 로그인 준비 여부: 웹용 HAYZ 서버(구글 로그인 콜백)가 열리기 전에는 false — 로그인 창 대신 데스크탑 앱 안내
+const WEB_LOGIN_READY = false;
+
 // 로그인 모달 + 구글 로그인 (OAuth 2.0 승인 코드 흐름, GIS initCodeClient redirect 모드)
 // 백엔드 주소: 로컬 개발은 localhost:4320. 클라우드타입 배포 시 이 값과 GCP 승인 원본·리디렉션 URI를 함께 바꿉니다.
 const BACKEND_BASE = 'http://localhost:4320';
@@ -45,7 +55,16 @@ async function startGoogleLogin() {
     select_account: true
   }).requestCode();
 }
-const openLogin = (e) => { e && e.preventDefault(); modal.hidden = false; };
+const openLogin = (e) => {
+  e && e.preventDefault();
+  if (!WEB_LOGIN_READY) {
+    document.getElementById('gLogin').hidden = true;
+    document.getElementById('loginDownload').hidden = false;
+    document.getElementById('loginLead').textContent = '웹 버전은 준비 중입니다. 지금은 맥 · 윈도우 데스크탑 앱으로 시작할 수 있습니다.';
+  }
+  modal.hidden = false;
+};
+document.getElementById('loginDownload').addEventListener('click', () => { modal.hidden = true; });
 const closeLogin = () => { modal.hidden = true; if (location.hash === '#login') history.replaceState(null, '', ' '); };
 document.getElementById('gLogin').addEventListener('click', startGoogleLogin);
 document.querySelectorAll('[data-open-login]').forEach(b => b.addEventListener('click', openLogin));
