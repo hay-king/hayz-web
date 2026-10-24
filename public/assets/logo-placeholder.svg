@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="로고 자리표시">
+  <rect width="64" height="64" rx="16" fill="#6b4226"/>
+  <path d="M18 16h8v32h-8zM38 16h8v14H38zM38 34h8v14h-8z" fill="#fbf6ec"/>
+</svg>

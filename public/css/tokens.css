@@ -1,0 +1,21 @@
+/* 최종 색상 미정. 브랜드 색은 이 변수만 바꾸면 됩니다. */
+:root {
+  --brand: #ff5b21;
+  --brand-d: #d9440f;
+  --brown: #6b4226;
+  --brown-d: #3b2414;
+  --camel: #c19a6b;
+  --camel-l: #e7d3b4;
+  --ivory: #fbf6ec;
+  --paper: #fffdf7;
+  --line: #e6d5b8;
+  --ink: #2a1a10;
+  --muted: #6d5344;
+  --danger: #9a3412;
+  --ok: #2f6b4f;
+  --wrap: 1120px;
+  --pad: clamp(16px, 4vw, 40px);
+  --gap: 20px;
+  --radius: 18px;
+  --font: -apple-system, "Apple SD Gothic Neo", Pretendard, "Noto Sans KR", sans-serif;
+}
