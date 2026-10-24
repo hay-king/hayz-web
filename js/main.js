@@ -1,4 +1,4 @@
-// BONGS 홈페이지 — 토덕이 테마. 주황 #ff5b21은 버튼·라벨 보조색
+// HAYZ 홈페이지 — 토덕이 테마. 주황 #ff5b21은 버튼·라벨 보조색
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // 앱 미리보기 사이드바
