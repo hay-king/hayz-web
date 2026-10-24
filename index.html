@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#6b4226">
   <title>HAYZ — 토덕이와 함께 일하는 AI 봇 사무실</title>
-  <meta name="google-client-id" content="170908678734-q0q2dmrhg5qcjv4dcbtcl2bgmk7u74nm.apps.googleusercontent.com">
   <meta name="description" content="토덕이와 AI 봇 BONGS가 함께 일하는 HAYZ 메신저 — 메일·일정·정산·거래처를 봇과 함께 처리합니다.">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -18,7 +17,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=signup1">
 </head>
 <body data-theme="hayz-todeogi">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -58,6 +57,7 @@
       <a href="#bots">봇 소개</a>
       <a href="#features">기능 소개</a>
       <a href="#download">다운로드</a>
+      <a href="#login" id="navAccount" data-open-login>로그인 · 가입</a>
       <a class="btn btn-sm" href="#download">앱 다운로드</a>
     </nav>
     <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="siteNav"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
@@ -165,10 +165,11 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
       <button class="modal-x" data-close-login aria-label="닫기">×</button>
       <svg class="modal-duck" viewBox="0 0 240 280" aria-hidden="true"><use href="#todeogi"/></svg>
-      <h2 id="loginTitle">HAYZ 시작하기</h2>
-      <p id="loginLead">구글 계정으로 로그인하거나 새 사무실을 만드세요.</p>
+      <h2 id="loginTitle">HAYZ 가입하기</h2>
+      <p id="loginLead">구글 계정 하나로 가입과 로그인을 함께 합니다.</p>
       <a class="btn" id="loginDownload" href="#download" hidden>데스크탑 앱 받기</a>
-      <button type="button" class="g-btn" id="gLogin"><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.2l7.9 6.2C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.6 0 20.2 0 24s1 7.4 2.7 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.2 0-11.5-4.2-13.4-9.9l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg>Google 계정으로 계속하기</button>
+      <a class="g-btn" id="gLogin" href="/auth/google/start"><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.2l7.9 6.2C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.6 0 20.2 0 24s1 7.4 2.7 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.2 0-11.5-4.2-13.4-9.9l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg>Google 계정으로 계속하기</a>
+      <p class="g-note" id="gNote">가입하면 구글 계정의 이름과 이메일만 HAYZ에 저장됩니다. 탈퇴하면 바로 지워집니다.</p>
       <p class="g-fallback" id="gFallback" hidden></p>
     </div>
   </div>
@@ -178,7 +179,6 @@
     <p>토덕이와 AI 봇들의 사무실 · © <span id="year"></span> HAYDAY. All rights reserved.</p>
     <a class="footer-mail" href="mailto:hi@ha-y.day"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg>문의 hi@ha-y.day</a>
   </footer>
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=signup1"></script>
 </body>
 </html>
