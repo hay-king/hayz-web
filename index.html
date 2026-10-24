@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6b4226">
-  <title>HAYZ — 토덕이와 함께 일하는 AI 봇 사무실</title>
+  <meta name="theme-color" content="#f1f1f3">
+  <title>HAYZ — 봇에게 맡기고, 승인만 하는 AI 사무실</title>
   <meta name="description" content="토덕이와 AI 봇 BONGS가 함께 일하는 HAYZ 메신저 — 메일·일정·정산·거래처를 봇과 함께 처리합니다.">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -17,156 +17,194 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css?v=r2">
 </head>
-<body data-theme="hayz-todeogi">
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <radialGradient id="tdBody" cx="35%" cy="28%" r="80%">
-        <stop offset="0" stop-color="var(--td-body-hi,#fffdf7)"/><stop offset=".55" stop-color="var(--td-body,#f3eadb)"/><stop offset="1" stop-color="var(--td-body-sh,#cdb999)"/>
-      </radialGradient>
-      <linearGradient id="tdNeck" x1="0" x2="1"><stop offset="0" stop-color="var(--td-body-hi,#fffdf7)"/><stop offset=".7" stop-color="var(--td-body,#f3eadb)"/><stop offset="1" stop-color="var(--td-body-sh,#cdb999)"/></linearGradient>
-      <linearGradient id="tdRim" y1="0" y2="1"><stop offset="0" stop-color="#fffdf7"/><stop offset="1" stop-color="var(--td-body-sh,#cdb999)"/></linearGradient>
-      <radialGradient id="tdEye" cx="40%" cy="30%" r="75%"><stop offset="0" stop-color="#4a3a33"/><stop offset="1" stop-color="#120c0a"/></radialGradient>
-      <radialGradient id="tdBill" cx="38%" cy="30%" r="80%">
-        <stop offset="0" stop-color="var(--td-bill-hi,#ffe08a)"/><stop offset=".55" stop-color="var(--td-bill,#f2b62c)"/><stop offset="1" stop-color="var(--td-bill-sh,#c98a12)"/>
-      </radialGradient>
-      <symbol id="todeogi" viewBox="0 0 240 280">
-        <ellipse cx="120" cy="268" rx="78" ry="9" fill="#3b2414" opacity=".28"/>
-        <path d="M40 270 C30 215 45 190 70 180 L170 180 C195 190 210 215 200 270Z" fill="url(#tdBody)"/>
-        <path d="M52 262 C46 224 58 200 76 192" stroke="#fff" stroke-opacity=".5" stroke-width="6" fill="none" stroke-linecap="round"/>
-        <circle cx="120" cy="125" r="82" fill="url(#tdBody)"/>
-        <path d="M78 60 C84 46 90 36 92 26 L148 26 C150 36 156 46 162 60Z" fill="url(#tdNeck)"/>
-        <ellipse cx="120" cy="25" rx="34" ry="9" fill="url(#tdRim)"/>
-        <ellipse cx="120" cy="24" rx="24" ry="5" fill="#d9c9ae" opacity=".7"/>
-        <ellipse cx="88" cy="88" rx="26" ry="16" fill="#fff" opacity=".55" transform="rotate(-30 88 88)"/>
-        <ellipse cx="80" cy="112" rx="8" ry="11" fill="url(#tdEye)" transform="rotate(12 80 112)"/>
-        <ellipse cx="112" cy="108" rx="8" ry="11" fill="url(#tdEye)" transform="rotate(8 112 108)"/>
-        <ellipse cx="78" cy="107" rx="2.6" ry="3.4" fill="#fff" opacity=".85"/><ellipse cx="110" cy="103" rx="2.6" ry="3.4" fill="#fff" opacity=".85"/>
-        <path d="M50 146 C48 130 70 124 96 126 C116 128 122 138 120 150 C118 162 100 168 76 166 C58 164 51 156 50 146Z" fill="url(#tdBill)"/>
-        <path d="M54 146 C70 150 100 150 118 146" stroke="#c98a12" stroke-width="2" fill="none" opacity=".5"/>
-        <ellipse cx="78" cy="134" rx="18" ry="4.5" fill="#fff" opacity=".45"/>
-      </symbol>
-    </defs>
-  </svg>
-
-  <header class="nav">
-    <a class="logo" href="#top"><span class="logo-mark"></span>HAYZ</a>
-    <nav id="siteNav">
-      <a href="#top">홈</a>
-      <a href="#bots">봇 소개</a>
-      <a href="#features">기능 소개</a>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="top">
+    <a class="brand" href="#main" aria-label="HAYZ 홈"><span class="brand-mark">H</span>HAYZ</a>
+    <nav class="pill" id="siteNav" aria-label="주요 메뉴">
+      <a href="#main" class="is-on">홈</a>
+      <a href="#bots">봇 팀</a>
+      <a href="#flow">승인 흐름</a>
+      <a href="#screens">화면</a>
       <a href="#download">다운로드</a>
-      <a href="https://port-0-hayz-app-mvkqr08w872db702.sel3.cloudtype.app/login">로그인</a>
-      <a class="btn btn-sm" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">베타 신청</a>
     </nav>
-    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="siteNav"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+    <div class="top-act">
+      <a class="btn btn-quiet" href="https://port-0-hayz-app-mvkqr08w872db702.sel3.cloudtype.app/login">로그인</a>
+      <a class="btn btn-ink" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">베타 신청</a>
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="siteNav"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-text">
-        <p class="kicker">HAYDAY AI MESSENGER · CHARACTER SERIES</p>
-        <h1>HAYZ<span>토덕이와 함께 일하는</span><span>AI 봇 사무실</span></h1>
-        <p class="lead">대화방에 AI 봇 BONGS를 초대하면 메일·일정·정산·거래처까지 함께 처리합니다. 중요한 실행은 언제나 승인 후에.</p>
-        <div class="cta">
-          <a class="btn" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">웹 베타 신청하기</a>
-          <a class="btn btn-ghost" href="#download">데스크탑 앱 받기</a>
+  <main id="main">
+    <section class="hero" aria-label="HAYZ 소개">
+      <div class="card hero-lead">
+        <span class="chip">AI 봇 사무실 · 맥 · 윈도우 · 웹 베타</span>
+        <h1>봇에게 맡기고,<br>승인만 하세요.</h1>
+        <p>대화방에서 @멘션 한 번이면 메일 · 일정 · 정산 · 거래처 일을 봇이 맡습니다. 보내기 · 등록 같은 실행은 언제나 실장님이 승인한 뒤에 합니다.</p>
+        <div class="hero-cta">
+          <a class="btn btn-white" href="#download"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>데스크탑 앱 받기</a>
+          <a class="btn btn-line" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">웹 베타 신청</a>
         </div>
-        <p class="hero-no">NO.<b>01</b> <span>토덕이 · TODEOGI<br>HAYZ 마스코트</span></p>
+        <p class="hero-ver">무료 · <b id="appVersion">v0.78.0</b><span id="appDate"></span></p>
       </div>
-      <div class="hero-visual">
-        <img class="todeogi-img" src="assets/todeogi-hero.webp" alt="3/4 각도로 서 있는 아이보리색 토덕이 캐릭터" width="880" height="1168" fetchpriority="high">
+
+      <div class="card hero-chat" aria-label="대화방 예시">
+        <div class="chat-head">
+          <span class="chat-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.7 0-8.5 3.1-8.5 7 0 2.2 1.2 4.1 3.1 5.4L6 20l3.6-2c.8.2 1.6.3 2.4.3 4.7 0 8.5-3.1 8.5-7s-3.8-7-8.5-7z"/></svg></span>
+          <div><b>견적 회신</b><small>실장님 · BONGS · 메일봇</small></div>
+          <span class="chat-live"><i></i>예시</span>
+        </div>
+        <ol class="chat" id="chatDemo">
+          <li class="msg me" data-step="1"><p><span class="at">@메일봇</span> 김예시 소장님 견적 문의에 회신 초안 써줘. 단가는 지난번 그대로.</p></li>
+          <li class="msg bot" data-step="2"><span class="who">메일봇</span><p class="typing" aria-hidden="true"><i></i><i></i><i></i></p></li>
+          <li class="msg bot" data-step="3"><span class="who">메일봇</span>
+            <div class="draft">
+              <p class="draft-to">받는 사람 · kim@example.com</p>
+              <p class="draft-sub">RE: 설계 용역 견적 문의</p>
+              <p class="draft-body">김예시 소장님, 문의 주신 용역은 지난 계약과 같은 단가로 진행 가능합니다. 견적서를 첨부드립니다.</p>
+              <div class="draft-act"><span class="btn btn-sm btn-ink" id="approveBtn"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>승인하고 보내기</span><span class="btn btn-sm btn-quiet">고치기</span></div>
+            </div>
+          </li>
+          <li class="msg sys" data-step="4"><p><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>실장님이 승인함 · 메일을 보냈습니다</p></li>
+        </ol>
+        <div class="composer" aria-hidden="true"><span>메시지 입력 · @로 봇 부르기</span><i><svg class="li li-sm" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></i></div>
       </div>
+
+      <div class="card hero-duck">
+        <img src="assets/todeogi-hero.webp" alt="HAYZ 마스코트 토덕이" width="880" height="1168" fetchpriority="high">
+        <p><b>토덕이</b>마스코트</p>
+      </div>
+      <a class="card hero-mini" href="#flow">
+        <span class="mini-k">승인 대기</span>
+        <span class="mini-v">보내기 전에<br>한 번 더 확인</span>
+        <span class="mini-go"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+      </a>
     </section>
 
-    <section id="bots" class="section">
-      <p class="label">BOT TEAM</p>
-      <h2>한 사무실에서 일하는 BONGS 봇들</h2>
-      <p class="sub">봇마다 맡은 일이 있고, 필요하면 서로 불러 함께 일합니다</p>
-      <div class="bots">
-          <article class="bot" tabindex="0"><span class="ico ico-img"><img class="bot-img" src="assets/todeogi-botcard.webp" alt="손을 흔드는 토덕이 봇 카드 이미지" width="640" height="640" loading="lazy"></span><h3>AI 봇 BONGS</h3><p>BONGS와 여러 AI를 @멘션으로 불러 대화방에서 함께 일합니다.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span><h3>메일</h3><p>메일을 요약하고 답장 초안을 승인받아 보냅니다.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6h15v13.5h-15z"/><path d="M4.5 10h15"/><path d="M8.5 3.5v4"/><path d="M15.5 3.5v4"/></svg></span><h3>일정</h3><p>회의·마감을 챙기고 겹치는 약속을 알려 줍니다.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h12v16H6z"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 10.5h1.5"/><path d="M12 10.5h3.5"/><path d="M8.5 14h1.5"/><path d="M12 14h3.5"/><path d="M8.5 17.5h1.5"/><path d="M12 17.5h3.5"/></svg></span><h3>정산</h3><p>견적·계약·정산과 미수금을 정리합니다.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-5h6v5"/><path d="M8 10.5h.01"/><path d="M12 10.5h.01"/><path d="M16 10.5h.01"/></svg></span><h3>거래처</h3><p>거래처 원장과 연락 기록을 한곳에.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20h17"/><path d="M5 20V9l7-4.5L19 9v11"/><path d="M8.5 13h3v3h-3z"/><path d="M14 20v-6.5h2.5V20"/></svg></span><h3>사무실·코인</h3><p>멤버·권한, 사무실 연결과 코인 기록.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h16v17H4z"/><path d="M8 8.5l1.6 1.6L12.5 7"/><path d="M8 14.5l1.6 1.6 2.9-3.1"/><path d="M14.5 9h2.5"/><path d="M14.5 15h2.5"/></svg></span><h3>업무앱</h3><p>프로젝트·업무를 봇에게 넘깁니다.</p></article>
-          <article class="bot" tabindex="0"><span class="ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 9.5 6 4.5h12l1.5 5"/><path d="M4.5 9.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/><path d="M6 12v7.5h12V12"/><path d="M10 19.5v-4h4v4"/></svg></span><h3>마켓</h3><p>새 봇을 데려오고 다른 사무실과 공유합니다.</p></article>
+    <section class="block" id="bots">
+      <div class="block-head">
+        <h2>한 사무실에서 일하는 봇 팀</h2>
+        <p>봇마다 맡은 일이 있고, 필요하면 서로 불러 함께 처리합니다.</p>
       </div>
-    </section>
-
-    <section id="entry" class="section alt">
-      <p class="label">ENTRY</p>
-      <h2>어디서든 같은 사무실</h2>
-      <p class="sub">세 가지 진입점, 하나의 HAYZ</p>
-      <div class="cards three">
-        <a class="card card-link" href="#download"><div class="icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h17v11h-17z"/><path d="M9 20h6"/><path d="M12 16v4"/></svg></div><h3>데스크톱</h3><p>맥·윈도우 앱. 로컬 데이터와 키체인으로 안전하게, 가장 많은 기능을.</p><span class="tag on">지금 다운로드</span></a>
-        <article class="card"><div class="icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3h9v18h-9z"/><path d="M11 18h2"/></svg></div><h3>모바일</h3><p>이동 중에도 BONGS의 보고를 받고, 승인 한 번으로 일을 넘기세요.</p><span class="tag">준비 중</span></article>
-        <a class="card card-link" href="https://port-0-hayz-app-mvkqr08w872db702.sel3.cloudtype.app/login"><div class="icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.6 3.6 5.4 3.6 8.5s-1.2 5.9-3.6 8.5c-2.4-2.6-3.6-5.4-3.6-8.5s1.2-5.9 3.6-8.5z"/></svg></div><h3>웹</h3><p>설치 없이 브라우저에서 바로. 어떤 기기에서든 사무실에 들어옵니다.</p><span class="tag on">초대 베타 · 로그인</span></a>
-      </div>
-    </section>
-
-    <section id="features" class="section mag">
-      <p class="label">FEATURES</p>
-      <h2>HAYZ가 하는 일</h2>
-      <div class="issues">
-        <article class="issue"><img class="issue-img" src="assets/todeogi-magazine.webp" alt="토덕이 매거진 표지 클로즈업" width="880" height="1168" loading="lazy"><p class="no">NO.<b>01</b></p><h3>AI 봇 BONGS 대화방</h3><p>BONGS가 여러 AI를 @멘션으로 불러 함께 답하고 일합니다.</p><span class="band">HAYZ FEATURE · 01</span></article>
-        <article class="issue"><img class="issue-img issue-shot" src="assets/app-home.jpg" alt="HAYZ 홈 대시보드 — 매출, 오늘 할 일, 안 읽은 메일, 최근 메모" width="900" height="1200" loading="lazy"><p class="no">NO.<b>02</b></p><h3>메일·일정·업무</h3><p>메일함, 캘린더, 프로젝트와 업무를 BONGS가 정리합니다.</p><span class="band">HAYZ FEATURE · 02</span></article>
-        <article class="issue"><img class="issue-img issue-shot" src="assets/app-ledger.jpg" alt="HAYZ 거래처 관리 — 월별 계약·입금·미수" width="900" height="1200" loading="lazy"><p class="no">NO.<b>03</b></p><h3>정산·거래처</h3><p>견적·계약·정산과 거래처 원장을 한곳에서.</p><span class="band">HAYZ FEATURE · 03</span></article>
-        <article class="issue"><img class="issue-img issue-shot" src="assets/app-market.jpg" alt="HAYZ 봇 마켓 — 분야별 전문가 AI 봇" width="900" height="1200" loading="lazy"><p class="no">NO.<b>04</b></p><h3>사무실 연결·마켓</h3><p>다른 사무실과 봇을 공유하고 마켓에서 봇을 데려옵니다.</p><span class="band">HAYZ FEATURE · 04</span></article>
-      </div>
-    </section>
-
-    <section id="download" class="section">
-      <p class="label">DOWNLOAD</p>
-      <h2>데스크탑 앱 받기</h2>
-      <p class="sub">무료 · 지금 버전 <b id="appVersion">v0.78.0</b><span id="appDate"></span> · 설치 뒤에는 새 버전을 자동으로 받습니다 · 데이터는 내 컴퓨터에 저장됩니다</p>
-      <div class="cards two dl">
-        <article class="card">
-          <div class="icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14v9.5H5z"/><path d="M2.5 18.5h19l-1.6-3.5H4.1z"/></svg></div><h3>macOS</h3>
-          <p>애플 실리콘(M1 이후) 맥 · macOS 13 이상</p>
-          <a class="btn" href="https://github.com/hay-king/hayz-web/releases/latest/download/HAYZ-mac-arm64.dmg"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>맥용 다운로드 (.dmg)</a>
-          <details><summary>처음 열 때 경고가 뜨면</summary><p>아직 애플 공증 전이라 ‘확인되지 않은 개발자’ 경고가 뜰 수 있습니다. <b>시스템 설정 → 개인정보 보호 및 보안</b> 아래쪽의 ‘그래도 열기’를 누르면 다음부터는 바로 열립니다.</p></details>
+      <div class="bot-grid">
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico is-img"><img src="assets/todeogi-botcard.webp" alt="" width="640" height="640" loading="lazy"></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>BONGS<small>대화방 진행</small></h3>
+          <p>여러 AI를 @멘션으로 불러 함께 답하고, 일을 알맞은 봇에게 넘깁니다.</p>
         </article>
-        <article class="card">
-          <div class="icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5l7-1v7H4z"/><path d="M13 4.3l7-1V11.5h-7z"/><path d="M4 12.5h7v7l-7-1z"/><path d="M13 12.5h7v8.2l-7-1z"/></svg></div><h3>Windows <span class="tag">베타</span></h3>
-          <p>윈도우 10·11 (64비트) · 압축을 풀고 실행</p>
-          <a class="btn btn-ghost-dark" href="https://github.com/hay-king/hayz-web/releases/latest/download/HAYZ-windows.zip"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>윈도우용 다운로드 (.zip)</a>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>메일<small>요약 · 답장 초안</small></h3>
+          <p>받은 메일을 요약하고, 답장 초안은 승인받은 뒤에 보냅니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6h15v13.5h-15z"/><path d="M4.5 10h15"/><path d="M8.5 3.5v4"/><path d="M15.5 3.5v4"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>일정<small>회의 · 마감</small></h3>
+          <p>겹치는 약속과 다가오는 마감을 먼저 알려 줍니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h12v16H6z"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 10.5h1.5"/><path d="M12 10.5h3.5"/><path d="M8.5 14h1.5"/><path d="M12 14h3.5"/><path d="M8.5 17.5h1.5"/><path d="M12 17.5h3.5"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>정산<small>견적 · 미수금</small></h3>
+          <p>견적 · 계약 · 입금을 정리하고 미수금을 챙깁니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-5h6v5"/><path d="M8 10.5h.01"/><path d="M12 10.5h.01"/><path d="M16 10.5h.01"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>거래처<small>원장 · 연락 기록</small></h3>
+          <p>거래처별 계약과 연락 기록을 한곳에 모읍니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h16v17H4z"/><path d="M8 8.5l1.6 1.6L12.5 7"/><path d="M8 14.5l1.6 1.6 2.9-3.1"/><path d="M14.5 9h2.5"/><path d="M14.5 15h2.5"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>업무<small>프로젝트 · 할 일</small></h3>
+          <p>프로젝트와 할 일을 나누고 진행을 보고합니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20h17"/><path d="M5 20V9l7-4.5L19 9v11"/><path d="M8.5 13h3v3h-3z"/><path d="M14 20v-6.5h2.5V20"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>사무실<small>멤버 · 권한</small></h3>
+          <p>멤버와 권한, 다른 사무실과의 연결을 관리합니다.</p>
+        </article>
+        <article class="bot">
+          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 9.5 6 4.5h12l1.5 5"/><path d="M4.5 9.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/><path d="M6 12v7.5h12V12"/><path d="M10 19.5v-4h4v4"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
+          <h3>마켓<small>봇 데려오기</small></h3>
+          <p>분야별 전문가 봇을 찾아 내 사무실에 들입니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="flow">
+      <div class="block-head">
+        <h2>실행은 언제나 승인 후에</h2>
+        <p>봇이 준비하고, 사람이 결정합니다. 모든 봇이 같은 순서로 일합니다.</p>
+      </div>
+      <ol class="flow">
+        <li class="card"><span class="flow-n">1</span><h3>부르기</h3><p>대화방에서 <b>@봇이름</b>으로 일을 맡깁니다. 방에 없는 봇은 BONGS가 불러옵니다.</p></li>
+        <li class="card"><span class="flow-n">2</span><h3>준비</h3><p>봇이 메일 초안 · 일정 · 정산표를 만들어 대화방에 올립니다.</p></li>
+        <li class="card is-key"><span class="flow-n">3</span><h3>승인</h3><p>내용을 보고 <b>승인</b>을 눌러야 보내기 · 등록이 실행됩니다. 고치라고 돌려보낼 수도 있습니다.</p></li>
+      </ol>
+    </section>
+
+    <section class="block" id="screens">
+      <div class="block-head">
+        <h2>실제 앱 화면</h2>
+        <p>지금 맥 · 윈도우 앱에서 쓰는 화면입니다. 데모 데이터로 채웠습니다.</p>
+      </div>
+      <div class="card screens">
+        <div class="tabs" role="tablist" aria-label="앱 화면">
+          <button role="tab" aria-selected="true" aria-controls="shot" data-shot="home">오늘의 사무실</button>
+          <button role="tab" aria-selected="false" aria-controls="shot" data-shot="ledger">거래처 · 정산</button>
+          <button role="tab" aria-selected="false" aria-controls="shot" data-shot="market">봇 마켓</button>
+        </div>
+        <div class="shot-wrap">
+          <p class="shot-cap" id="shotCap">매출 · 오늘 할 일 · 안 읽은 메일 · 최근 메모를 한 화면에서 봅니다.</p>
+          <div class="shot-frame"><img id="shot" role="tabpanel" src="assets/app-home.jpg" alt="HAYZ 홈 대시보드 — 매출, 오늘 할 일, 안 읽은 메일, 최근 메모" width="900" height="1200" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="download">
+      <div class="block-head">
+        <h2>어디서든 같은 사무실</h2>
+        <p>데스크탑 앱은 지금 무료로 받을 수 있습니다. 설치 뒤에는 새 버전을 자동으로 받습니다.</p>
+      </div>
+      <div class="dl-grid">
+        <article class="card dl">
+          <div class="dl-top"><span class="dl-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14v9.5H5z"/><path d="M2.5 18.5h19l-1.6-3.5H4.1z"/></svg></span><span class="tag tag-on">지금 받기</span></div>
+          <h3>macOS</h3>
+          <p>애플 실리콘(M1 이후) · macOS 13 이상. 데이터는 내 맥에 저장됩니다.</p>
+          <a class="btn btn-orange" href="https://github.com/hay-king/hayz-web/releases/latest/download/HAYZ-mac-arm64.dmg"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>맥용 다운로드 (.dmg)</a>
+          <details><summary>처음 열 때 경고가 뜨면</summary><p>아직 애플 공증 전이라 ‘확인되지 않은 개발자’ 경고가 뜰 수 있습니다. <b>시스템 설정 → 개인정보 보호 및 보안</b>에서 ‘그래도 열기’를 누르면 다음부터 바로 열립니다.</p></details>
+        </article>
+        <article class="card dl">
+          <div class="dl-top"><span class="dl-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5l7-1v7H4z"/><path d="M13 4.3l7-1V11.5h-7z"/><path d="M4 12.5h7v7l-7-1z"/><path d="M13 12.5h7v8.2l-7-1z"/></svg></span><span class="tag">베타</span></div>
+          <h3>Windows</h3>
+          <p>윈도우 10 · 11 (64비트). 압축을 풀고 실행합니다.</p>
+          <a class="btn btn-ink" href="https://github.com/hay-king/hayz-web/releases/latest/download/HAYZ-windows.zip"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>윈도우용 다운로드 (.zip)</a>
           <details><summary>처음 열 때 경고가 뜨면</summary><p>‘Windows의 PC 보호’ 창이 뜨면 <b>추가 정보 → 실행</b>을 누르세요. 윈도우판은 베타라 일부 기능이 다를 수 있습니다.</p></details>
         </article>
+        <article class="card dl">
+          <div class="dl-top"><span class="dl-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17z"/><path d="M3.5 12h17"/><path d="M12 3.5c2.4 2.6 3.6 5.4 3.6 8.5s-1.2 5.9-3.6 8.5c-2.4-2.6-3.6-5.4-3.6-8.5s1.2-5.9 3.6-8.5z"/></svg></span><span class="tag">초대 베타</span></div>
+          <h3>웹</h3>
+          <p>설치 없이 브라우저에서. 지금은 초대받은 계정만 들어올 수 있습니다.</p>
+          <div class="dl-two"><a class="btn btn-line-ink" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">베타 신청</a><a class="btn btn-quiet" href="https://port-0-hayz-app-mvkqr08w872db702.sel3.cloudtype.app/login">로그인<svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div>
+        </article>
+        <article class="card dl is-soon">
+          <div class="dl-top"><span class="dl-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3h9v18h-9z"/><path d="M11 18h2"/></svg></span><span class="tag">준비 중</span></div>
+          <h3>모바일</h3>
+          <p>이동 중에 봇의 보고를 받고, 승인 한 번으로 일을 넘깁니다.</p>
+        </article>
       </div>
-      <p class="sub fine">AI 봇은 이 컴퓨터에 로그인한 Claude · ChatGPT(Codex) · Grok · Gemini 구독이나 API 키로 답합니다. 메일 · 일정 · 정산 같은 실행은 언제나 승인 후에 합니다.</p>
+      <p class="fine">AI 봇은 이 컴퓨터에 로그인한 Claude · ChatGPT(Codex) · Grok · Gemini 구독이나 API 키로 답합니다.</p>
     </section>
-
-    <section id="preview" class="section alt">
-      <p class="label">PREVIEW</p>
-      <h2>로그인 후 화면 미리보기</h2>
-      <p class="sub">사이드바의 7개 메뉴에서 BONGS와 함께 일합니다</p>
-      <div class="app-shell" aria-label="앱 화면 미리보기">
-        <aside class="app-side">
-          <div class="logo"><span class="logo-mark"></span>HAYZ</div>
-          <a class="on" data-route="/app/messenger"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.7 0-8.5 3.1-8.5 7 0 2.2 1.2 4.1 3.1 5.4L6 20l3.6-2c.8.2 1.6.3 2.4.3 4.7 0 8.5-3.1 8.5-7s-3.8-7-8.5-7z"/></svg>메신저</a>
-          <a data-route="/app/mail"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg>메일</a>
-          <a data-route="/app/calendar"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6h15v13.5h-15z"/><path d="M4.5 10h15"/><path d="M8.5 3.5v4"/><path d="M15.5 3.5v4"/></svg>일정</a>
-          <a data-route="/app/billing"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h12v16H6z"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 10.5h1.5"/><path d="M12 10.5h3.5"/><path d="M8.5 14h1.5"/><path d="M12 14h3.5"/><path d="M8.5 17.5h1.5"/><path d="M12 17.5h3.5"/></svg>정산</a>
-          <a data-route="/app/clients"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-5h6v5"/><path d="M8 10.5h.01"/><path d="M12 10.5h.01"/><path d="M16 10.5h.01"/></svg>거래처</a>
-          <a data-route="/app/office"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20h17"/><path d="M5 20V9l7-4.5L19 9v11"/><path d="M8.5 13h3v3h-3z"/><path d="M14 20v-6.5h2.5V20"/></svg>사무실 연결</a>
-          <a data-route="/app/market"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 9.5 6 4.5h12l1.5 5"/><path d="M4.5 9.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/><path d="M6 12v7.5h12V12"/><path d="M10 19.5v-4h4v4"/></svg>마켓</a>
-        </aside>
-        <div class="app-main"><div class="app-top"><span id="appRoute">/app/messenger</span><span class="app-top-ico"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20h4"/></svg><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/><path d="M5 20c.7-3.6 3.5-5.5 7-5.5s6.3 1.9 7 5.5"/></svg></span></div>
-          <div class="app-body"><img class="app-img" src="assets/todeogi-free.webp" alt="노트북으로 일하는 토덕이" width="880" height="1168" loading="lazy"><div class="sk"></div><div class="sk s2"></div><div class="sk s3"></div></div></div>
-      </div>
-    </section>
-
   </main>
 
-
-  <footer class="footer">
-    <div class="logo"><span class="logo-mark"></span>HAYZ</div>
-    <p>토덕이와 AI 봇들의 사무실 · © <span id="year"></span> HAYDAY. All rights reserved.</p>
-    <a class="footer-mail" href="mailto:hi@ha-y.day"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg>문의 hi@ha-y.day</a>
+  <footer class="foot">
+    <a class="brand" href="#main"><span class="brand-mark">H</span>HAYZ</a>
+    <p>© <span id="year"></span> HAYDAY · 토덕이와 AI 봇들의 사무실</p>
+    <a class="foot-mail" href="mailto:hi@ha-y.day"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg>문의 hi@ha-y.day</a>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=r2"></script>
 </body>
 </html>
