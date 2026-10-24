@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ — HAYZ</title>
+  <meta name="description" content="HAYZ 로그인, 권한, 다운로드, 탈퇴에 대한 질문">
+  <meta name="theme-color" content="#3b2414">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">본문으로 건너뛰기</a>
+  <header class="nav" data-nav>
+    <div class="nav-inner">
+      <a class="logo" href="/">
+        <img class="logo-mark" src="/assets/logo-placeholder.svg" width="28" height="28" alt="">
+        <span>HAYZ</span>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">메뉴</span>
+        <span data-icon="menu"></span>
+      </button>
+      <nav id="site-nav" aria-label="주요">
+        <a href="/">홈</a>
+        <a href="/#features">기능</a>
+        <a href="/#download">다운로드</a>
+        <a href="/pricing">요금</a>
+        <a href="/faq" aria-current="page">FAQ</a>
+        <a class="btn btn-sm" href="/auth/google/start" data-login>로그인</a>
+        <a class="btn btn-sm" href="/me" data-me hidden>내 정보</a>
+        <a class="btn btn-sm" href="/admin" data-admin hidden>관리</a>
+      </nav>
+    </div>
+  </header>
+  <p class="notice" id="auth-notice" role="status" hidden></p>
+  <main id="content" class="section">
+    <div class="wrap prose">
+      <p class="label">FAQ</p>
+      <h2>자주 묻는 질문</h2>
+      <p class="sub">지금 사이트에서 동작하는 내용만 적었습니다.</p>
+      <details>
+        <summary>HAYZ는 무엇인가요?</summary>
+        <p>HAYZ는 AI 봇 BONGS와 함께 쓰는 메신저형 업무 공간입니다. 메신저, 업무앱, 메일, 사무실 공유, 마켓을 한 서비스 안에서 다루도록 준비하고 있습니다.</p>
+      </details>
+      <details>
+        <summary>BONGS와 토덕이는 어떻게 다른가요?</summary>
+        <p>BONGS는 AI 봇의 이름입니다. 토덕이는 BONGS의 마스코트 캐릭터입니다.</p>
+      </details>
+      <details>
+        <summary>가입은 어떻게 하나요?</summary>
+        <p>구글 계정으로 로그인합니다. 처음이라면 이용약관과 개인정보 처리방침에 동의한 뒤에 가입이 끝납니다. 이미 동의한 계정은 바로 로그인됩니다.</p>
+      </details>
+      <details>
+        <summary>구글에 어떤 권한을 허용하게 되나요?</summary>
+        <p>openid, email, profile만 요청합니다. Gmail을 포함한 메일함 권한은 로그인 범위에 넣지 않습니다.</p>
+      </details>
+      <details>
+        <summary>앱은 어디서 받나요?</summary>
+        <p>Mac, Windows, 웹 앱 주소는 준비 중이고 휴대폰 PWA는 예정입니다. 받는 주소는 아직 없습니다.</p>
+      </details>
+      <details>
+        <summary>요금은 얼마인가요?</summary>
+        <p>아직 정해지지 않았습니다. 요금 페이지의 이름과 금액은 자리표시입니다.</p>
+      </details>
+      <details>
+        <summary>탈퇴하면 정보가 어떻게 되나요?</summary>
+        <p>내 정보에서 가입 이메일을 다시 입력해 본인을 확인한 뒤 탈퇴할 수 있습니다. 계정은 비활성화되고 이메일, 이름, 사진, 구글 식별자는 삭제됩니다.</p>
+      </details>
+      <details>
+        <summary>로그인은 언제 풀리나요?</summary>
+        <p>일정 시간 동안 사이트를 쓰지 않으면 유휴 만료되고, 로그인한 시점부터 정한 절대 시간이 지나면 다시 로그인해야 합니다. 기본값은 유휴 2시간, 절대 7일이며 서버 환경변수로 바꿉니다.</p>
+      </details>
+      <details>
+        <summary>문의는 어디로 하나요?</summary>
+        <p>고객 지원 채널은 아직 열려 있지 않습니다.</p>
+      </details>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> HAYZ</p>
+      <nav aria-label="하단">
+        <a href="/pricing">요금</a>
+        <a href="/legal/terms">이용약관</a>
+        <a href="/legal/privacy">개인정보 처리방침</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module" src="/js/page.js"></script>
+</body>
+</html>

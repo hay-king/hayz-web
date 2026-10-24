@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAYZ — 토덕이와 함께 일하는 AI 봇 사무실</title>
+  <meta name="description" content="HAYZ는 AI 봇 BONGS와 메신저, 업무, 메일, 사무실 공유, 마켓을 한곳에서 잇는 서비스입니다.">
+  <meta name="theme-color" content="#3b2414">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">본문으로 건너뛰기</a>
+  <header class="nav" data-nav>
+    <div class="nav-inner">
+      <a class="logo" href="/">
+        <img class="logo-mark" src="/assets/logo-placeholder.svg" width="28" height="28" alt="">
+        <span>HAYZ</span>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">메뉴</span>
+        <span data-icon="menu"></span>
+      </button>
+      <nav id="site-nav" aria-label="주요">
+        <a href="/" aria-current="page">홈</a>
+        <a href="/#features">기능</a>
+        <a href="/#download">다운로드</a>
+        <a href="/pricing">요금</a>
+        <a href="/faq">FAQ</a>
+        <a class="btn btn-sm" href="/auth/google/start" data-login>로그인</a>
+        <a class="btn btn-sm" href="/me" data-me hidden>내 정보</a>
+        <a class="btn btn-sm" href="/admin" data-admin hidden>관리</a>
+      </nav>
+    </div>
+  </header>
+  <p class="notice" id="auth-notice" role="status" hidden></p>
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">HAYZ · AI MESSENGER</p>
+          <h1>HAYZ<span class="hero-sub">토덕이와 함께 일하는 AI 봇 사무실</span></h1>
+          <p class="lead">대화방 안에서 AI 봇 BONGS와 메신저, 업무, 메일, 사무실 공유, 마켓을 이어 갑니다. 실행이 필요한 일은 사람이 확인한 뒤에 진행하는 흐름으로 준비하고 있습니다.</p>
+          <div class="cta">
+            <a class="btn btn-light" href="/auth/google/start"><span data-icon="google"></span>Google 계정으로 시작</a>
+            <a class="btn btn-ghost" href="#features">기능 보기</a>
+          </div>
+          <p class="fine">처음 로그인하면 이용약관과 개인정보 처리방침에 동의한 뒤에 가입이 완료됩니다. 로그인 범위는 openid, email, profile이며 메일함 권한은 요청하지 않습니다.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="/assets/todeogi-hero.webp" width="880" height="1168" alt="아이보리색 토덕이 캐릭터" fetchpriority="high">
+          <p class="hero-no"><span>NO.</span><strong>01</strong><span>토덕이 · 마스코트</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <p class="label">FEATURES</p>
+        <h2>HAYZ가 다루는 일</h2>
+        <p class="sub">화면은 아직 자리표시입니다. 실제 앱 캡처가 정해지면 같은 이름의 파일만 바꾸면 됩니다.</p>
+        <div class="feature-grid">
+          <article class="feature">
+            <img class="capture" src="/assets/captures/messenger.svg" width="640" height="400" alt="메신저 화면 자리표시" loading="lazy">
+            <h3><span data-icon="messenger"></span>메신저</h3>
+            <p>대화방에서 이야기와 업무를 이어 갑니다. BONGS를 같은 방에 두고 맥락을 유지합니다.</p>
+          </article>
+          <article class="feature">
+            <img class="capture" src="/assets/captures/bongs.svg" width="640" height="400" alt="BONGS 화면 자리표시" loading="lazy">
+            <h3><span data-icon="spark"></span>BONGS AI</h3>
+            <p>AI 봇 BONGS를 멘션으로 불러 정리와 초안을 맡깁니다. 토덕이는 BONGS의 마스코트입니다.</p>
+          </article>
+          <article class="feature">
+            <img class="capture" src="/assets/captures/work.svg" width="640" height="400" alt="업무앱 화면 자리표시" loading="lazy">
+            <h3><span data-icon="apps"></span>업무앱</h3>
+            <p>프로젝트와 할 일을 봇과 나누고, 진행을 한 화면에서 봅니다.</p>
+          </article>
+          <article class="feature">
+            <img class="capture" src="/assets/captures/mail.svg" width="640" height="400" alt="메일 화면 자리표시" loading="lazy">
+            <h3><span data-icon="mail"></span>메일</h3>
+            <p>메일 요약과 답장 초안을 다루는 기능입니다. 가입 로그인에서는 메일함 권한을 받지 않습니다.</p>
+          </article>
+          <article class="feature">
+            <img class="capture" src="/assets/captures/office.svg" width="640" height="400" alt="사무실 공유 화면 자리표시" loading="lazy">
+            <h3><span data-icon="office"></span>사무실 공유</h3>
+            <p>멤버와 권한, 다른 사무실과의 연결을 관리하는 공간입니다.</p>
+          </article>
+          <article class="feature">
+            <img class="capture" src="/assets/captures/market.svg" width="640" height="400" alt="마켓 화면 자리표시" loading="lazy">
+            <h3><span data-icon="market"></span>마켓</h3>
+            <p>사무실에 둘 봇을 찾아보는 공간입니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="download">
+      <div class="wrap">
+        <p class="label">DOWNLOAD</p>
+        <h2>다운로드</h2>
+        <p class="sub">Mac, Windows, 웹, 휴대폰 PWA의 주소는 아직 정해지지 않았습니다.</p>
+        <div class="download-grid">
+          <article class="card" data-download="mac">
+            <span data-icon="laptop"></span>
+            <h3>Mac</h3>
+            <p>macOS 앱</p>
+            <span class="status" data-download-status>준비 중</span>
+            <a class="btn" href="#download" data-download-link>링크 미정</a>
+          </article>
+          <article class="card" data-download="windows">
+            <span data-icon="window"></span>
+            <h3>Windows</h3>
+            <p>Windows 앱</p>
+            <span class="status" data-download-status>준비 중</span>
+            <a class="btn" href="#download" data-download-link>링크 미정</a>
+          </article>
+          <article class="card" data-download="web">
+            <span data-icon="web"></span>
+            <h3>웹</h3>
+            <p>브라우저</p>
+            <span class="status" data-download-status>준비 중</span>
+            <a class="btn" href="#download" data-download-link>링크 미정</a>
+          </article>
+          <article class="card" data-download="pwa">
+            <span data-icon="phone"></span>
+            <h3>휴대폰</h3>
+            <p>PWA</p>
+            <span class="status" data-download-status>예정</span>
+            <a class="btn" href="#download" data-download-link>링크 미정</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>요금과 질문</h2>
+        <p class="sub">가격은 정해지기 전입니다. 자주 묻는 질문은 따로 모아 두었습니다.</p>
+        <div class="link-grid">
+          <article class="card">
+            <h3>요금</h3>
+            <p>무료, 팀, 사무실 구분은 자리표시이고 금액은 비어 있습니다.</p>
+            <a class="btn" href="/pricing">요금 보기</a>
+          </article>
+          <article class="card">
+            <h3>FAQ</h3>
+            <p>로그인 권한, 앱 배포, 탈퇴처럼 지금 동작하는 내용을 적었습니다.</p>
+            <a class="btn" href="/faq">FAQ 보기</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="logo" href="/"><img class="logo-mark" src="/assets/logo-placeholder.svg" width="28" height="28" alt=""><span>HAYZ</span></a>
+        <p>로고, 색상, 다운로드 주소, 앱 화면은 확정 전 자리표시입니다.</p>
+      </div>
+      <nav aria-label="하단">
+        <a href="/pricing">요금</a>
+        <a href="/faq">FAQ</a>
+        <a href="/legal/terms">이용약관</a>
+        <a href="/legal/privacy">개인정보 처리방침</a>
+      </nav>
+      <p>© <span id="year">2026</span> HAYZ</p>
+    </div>
+  </footer>
+  <script type="module" src="/js/home.js"></script>
+</body>
+</html>
