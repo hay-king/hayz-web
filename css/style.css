@@ -243,32 +243,3 @@ h3 .tag{margin:0 0 0 6px;font-size:.72rem}
   .nav nav.open .btn-sm{margin-top:12px;text-align:center}
   .cards.two{grid-template-columns:1fr}
 }
-
-/* 가입 안내 · 내 계정 */
-[hidden]{display:none!important}
-a.g-btn{text-decoration:none}
-.g-note{margin:0;font-size:.82rem;color:var(--brown);opacity:.8;line-height:1.5}
-.acct-page{min-height:100vh;display:flex;flex-direction:column;background:var(--ivory)}
-.acct{flex:1;display:grid;place-items:start center;padding:56px 20px}
-.acct-loading{color:var(--brown)}
-.acct-card{width:100%;max-width:520px;display:grid;gap:22px;padding:32px 28px;border-radius:var(--r);background:#fff;box-shadow:var(--shadow);text-align:left}
-.acct-welcome{margin:0;padding:10px 14px;border-radius:12px;background:#fff1ea;color:var(--brand-d);font-weight:800}
-.acct-head{display:flex;align-items:center;gap:16px}
-.acct-head h1{margin:0;font-size:1.5rem;line-height:1.3;word-break:keep-all}
-.acct-mail{margin:2px 0 0;color:var(--brown);overflow-wrap:anywhere}
-.acct-avatar{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--brand);color:#fff;font-size:1.4rem;font-weight:800}
-.acct-info{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;font-size:.95rem}
-.acct-info dt{color:var(--brown);opacity:.75}
-.acct-info dd{margin:0;font-weight:700}
-.acct-form{display:grid;gap:8px}
-.acct-form label{font-weight:800}
-.acct-row{display:flex;gap:8px}
-.acct-row input{flex:1;min-width:0;padding:10px 14px;border:1.5px solid var(--camel-l);border-radius:12px;font:inherit;background:var(--ivory)}
-.acct-row input:focus{outline:2px solid var(--brand);outline-offset:1px}
-.acct-hint{margin:0;font-size:.88rem;color:var(--brown)}
-.acct-next{display:grid;gap:10px;justify-items:start;padding:20px;border-radius:16px;background:#f3e8d6}
-.acct-next h2{margin:0;font-size:1.1rem}
-.acct-next p{margin:0;color:var(--brown);word-break:keep-all}
-.acct-actions{display:flex;justify-content:space-between;gap:12px}
-.acct-link{border:0;background:none;padding:4px 0;font:inherit;color:var(--brown);cursor:pointer;text-decoration:underline}
-.acct-danger{color:#b3261e}

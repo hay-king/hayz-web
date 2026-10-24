@@ -25,54 +25,6 @@ const setNav = (open) => { nav.classList.toggle('open', open); navBtn.setAttribu
 navBtn.addEventListener('click', () => setNav(!nav.classList.contains('open')));
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
 
-// 가입 · 로그인: 같은 주소의 HAYZ 웹 서버(server.mjs)가 구글 로그인을 처리합니다.
-// 서버 없이 정적 파일로만 열렸거나 구글 키가 아직 없으면 로그인 대신 데스크탑 앱을 안내합니다.
-const modal = document.getElementById('login');
-const gMsg = document.getElementById('gFallback');
-const say = (t) => { gMsg.textContent = t; gMsg.hidden = !t; };
-const ERRORS = {
-  denied: '구글 로그인을 취소했습니다.',
-  state: '로그인 요청이 만료되었습니다. 다시 시도해 주세요.',
-  exchange: '구글 계정 확인에 실패했습니다. 잠시 후 다시 시도해 주세요.',
-  email: '이메일 인증이 끝난 구글 계정만 가입할 수 있습니다.',
-  setup: '가입 기능을 준비 중입니다. 잠시 후 다시 시도해 주세요.'
-};
-let loginReady = false;
-const authState = fetch('/auth/health', { credentials: 'same-origin' })
-  .then(r => (r.ok ? r.json() : null))
-  .then(async h => {
-    loginReady = Boolean(h && h.login);
-    if (!loginReady) return;
-    const me = await fetch('/auth/me', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
-    if (me && me.user) { // 이미 로그인: 머리말 단추를 내 계정으로
-      const a = document.getElementById('navAccount');
-      a.textContent = '내 계정'; a.href = '/account'; a.removeAttribute('data-open-login');
-      a.removeEventListener('click', openLogin);
-    }
-  })
-  .catch(() => {});
-
-function openLogin(e) {
-  e && e.preventDefault();
-  const ready = loginReady;
-  document.getElementById('gLogin').hidden = !ready;
-  document.getElementById('gNote').hidden = !ready;
-  document.getElementById('loginDownload').hidden = ready;
-  document.getElementById('loginTitle').textContent = ready ? 'HAYZ 가입하기' : 'HAYZ 시작하기';
-  document.getElementById('loginLead').textContent = ready
-    ? '구글 계정 하나로 가입과 로그인을 함께 합니다.'
-    : '웹 가입은 준비 중입니다. 지금은 맥 · 윈도우 데스크탑 앱으로 시작할 수 있습니다.';
-  modal.hidden = false;
-}
-document.getElementById('loginDownload').addEventListener('click', () => { modal.hidden = true; });
-const closeLogin = () => { modal.hidden = true; say(''); if (location.hash.startsWith('#login')) history.replaceState(null, '', location.pathname); };
-document.querySelectorAll('[data-open-login]').forEach(b => b.addEventListener('click', openLogin));
-document.querySelector('[data-close-login]').addEventListener('click', closeLogin);
-modal.addEventListener('click', e => { if (e.target === modal) closeLogin(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLogin(); });
-// 서버가 실패하면 /#login?error=... 로 돌려보냄
-if (location.hash.startsWith('#login')) authState.then(() => {
-  openLogin();
-  const err = new URLSearchParams(location.hash.split('?')[1] || '').get('error');
-  if (err) say(ERRORS[err] || '로그인에 실패했습니다. 다시 시도해 주세요.');
-});
+// 가입 · 로그인은 웹 HAYZ(별도 서비스)에서 합니다. 옛 주소 /#login 으로 들어오면 그쪽으로 보냅니다.
+const WEB_LOGIN = 'https://port-0-hayz-app-mvkqr08w872db702.sel3.cloudtype.app/login';
+if (location.hash.startsWith('#login')) location.replace(WEB_LOGIN);
