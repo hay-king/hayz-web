@@ -6,12 +6,12 @@
   <meta name="robots" content="noai, noimageai">
   <meta name="theme-color" content="#f1f1f3">
   <title>HAYZ — 봇에게 맡기고, 승인만 하는 AI 사무실</title>
-  <meta name="description" content="토덕이와 AI 봇 BONGS가 함께 일하는 HAYZ 메신저 — 메일·일정·정산·거래처를 봇과 함께 처리합니다.">
+  <meta name="description" content="봉패밀리 AI 봇 BONGS가 함께 일하는 HAYZ 메신저 — 메일·일정·정산·거래처를 봇과 함께 처리합니다.">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HAYZ">
-  <meta property="og:title" content="HAYZ — 토덕이와 함께 일하는 AI 봇 사무실">
+  <meta property="og:title" content="HAYZ — 봉패밀리와 함께 일하는 AI 봇 사무실">
   <meta property="og:description" content="대화방에 AI 봇 BONGS를 초대하면 메일·일정·정산·거래처까지 함께 처리합니다. 맥·윈도우 앱 무료 다운로드.">
   <meta property="og:url" content="https://web-hayz-web-mvkqr08w872db702.sel3.cloudtype.app/">
   <meta property="og:image" content="https://web-hayz-web-mvkqr08w872db702.sel3.cloudtype.app/assets/og.jpg">
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="css/style.css?v=r2">
+  <link rel="stylesheet" href="css/style.css?v=r3">
 </head>
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -51,18 +51,19 @@
           <a class="btn btn-line" href="mailto:hi@ha-y.day?subject=HAYZ%20%EC%9B%B9%20%EB%B2%A0%ED%83%80%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%9D%B4%EB%A6%84%3A%0A%ED%9A%8C%EC%82%AC/%EC%82%AC%EB%AC%B4%EC%8B%A4%3A%0A%EA%B0%80%EC%9E%85%ED%95%A0%20%EA%B5%AC%EA%B8%80%20%EA%B3%84%EC%A0%95%20%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%0A">웹 베타 신청</a>
         </div>
         <p class="hero-ver">무료 · <b id="appVersion">v0.78.0</b><span id="appDate"></span></p>
+        <figure class="lead-pic"><img src="assets/bong-02-bongbong.webp" alt="BONGS 봉봉 — 등불을 든 주황 털 캐릭터" width="840" height="1120" fetchpriority="high"><figcaption>NO.02 봉봉 · 거래처봇</figcaption></figure>
       </div>
 
       <div class="card hero-chat" aria-label="대화방 예시">
         <div class="chat-head">
           <span class="chat-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.7 0-8.5 3.1-8.5 7 0 2.2 1.2 4.1 3.1 5.4L6 20l3.6-2c.8.2 1.6.3 2.4.3 4.7 0 8.5-3.1 8.5-7s-3.8-7-8.5-7z"/></svg></span>
-          <div><b>견적 회신</b><small>실장님 · BONGS · 메일봇</small></div>
+          <div><b>견적 회신</b><small>실장님 · 봉달(메일봇)</small></div>
           <span class="chat-live"><i></i>예시</span>
         </div>
         <ol class="chat" id="chatDemo">
           <li class="msg me" data-step="1"><p><span class="at">@메일봇</span> 김예시 소장님 견적 문의에 회신 초안 써줘. 단가는 지난번 그대로.</p></li>
-          <li class="msg bot" data-step="2"><span class="who">메일봇</span><p class="typing" aria-hidden="true"><i></i><i></i><i></i></p></li>
-          <li class="msg bot" data-step="3"><span class="who">메일봇</span>
+          <li class="msg bot" data-step="2"><span class="who"><img src="assets/face-bongdal.webp" alt="" width="160" height="160">봉달 · 메일봇</span><p class="typing" aria-hidden="true"><i></i><i></i><i></i></p></li>
+          <li class="msg bot" data-step="3"><span class="who"><img src="assets/face-bongdal.webp" alt="" width="160" height="160">봉달 · 메일봇</span>
             <div class="draft">
               <p class="draft-to">받는 사람 · kim@example.com</p>
               <p class="draft-sub">RE: 설계 용역 견적 문의</p>
@@ -75,11 +76,12 @@
         <div class="composer" aria-hidden="true"><span>메시지 입력 · @로 봇 부르기</span><i><svg class="li li-sm" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></i></div>
       </div>
 
-      <div class="card hero-duck">
-        <img src="assets/todeogi-hero.webp" alt="HAYZ 마스코트 토덕이" width="880" height="1168" fetchpriority="high">
-        <p><b>토덕이</b>마스코트</p>
-      </div>
+      <a class="card hero-char" href="#bots">
+        <img src="assets/bong-06-todeogi.webp" alt="BONGS 토더기 — 흰 도자기 몸에 노란 부리" width="840" height="1120">
+        <p><b>토더기</b>BONGS 진행</p>
+      </a>
       <a class="card hero-mini" href="#flow">
+        <img class="mini-pic" src="assets/todeogi-ok.webp" alt="" width="280" height="248">
         <span class="mini-k">승인 대기</span>
         <span class="mini-v">보내기 전에<br>한 번 더 확인</span>
         <span class="mini-go"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
@@ -88,49 +90,83 @@
 
     <section class="block" id="bots">
       <div class="block-head">
-        <h2>한 사무실에서 일하는 봇 팀</h2>
-        <p>봇마다 맡은 일이 있고, 필요하면 서로 불러 함께 처리합니다.</p>
+        <div>
+          <p class="eyebrow">BONG FAMILY · BONGS</p>
+          <h2>봉패밀리가 사무실 일을 나눠 맡습니다</h2>
+        </div>
+        <p>HAYZ의 AI 봇 BONGS는 봉패밀리 캐릭터입니다. 봇마다 맡은 일이 있고, 필요하면 서로 불러 함께 처리합니다.</p>
       </div>
-      <div class="bot-grid">
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico is-img"><img src="assets/todeogi-botcard.webp" alt="" width="640" height="640" loading="lazy"></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>BONGS<small>대화방 진행</small></h3>
-          <p>여러 AI를 @멘션으로 불러 함께 답하고, 일을 알맞은 봇에게 넘깁니다.</p>
+      <div class="bong-grid">
+        <article class="bong" style="--c:#2f5bd6">
+          <img src="assets/bong-01-bongi.webp" alt="BONGS 봉이 — 열쇠를 든 파란 털 캐릭터" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">사무실봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>01</p>
+            <h3>봉이<small>BONGI · 사무실봇</small></h3>
+            <p>열쇠를 쥐고 멤버 · 권한, 다른 사무실과의 연결을 관리합니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>메일<small>요약 · 답장 초안</small></h3>
-          <p>받은 메일을 요약하고, 답장 초안은 승인받은 뒤에 보냅니다.</p>
+        <article class="bong" style="--c:#e8641e">
+          <img src="assets/bong-02-bongbong.webp" alt="BONGS 봉봉 — 등불을 든 주황 털 캐릭터" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">거래처봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>02</p>
+            <h3>봉봉<small>BONGBONG · 거래처봇</small></h3>
+            <p>등불을 들고 거래처 사람들과의 계약 · 연락 기록을 챙깁니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6h15v13.5h-15z"/><path d="M4.5 10h15"/><path d="M8.5 3.5v4"/><path d="M15.5 3.5v4"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>일정<small>회의 · 마감</small></h3>
-          <p>겹치는 약속과 다가오는 마감을 먼저 알려 줍니다.</p>
+        <article class="bong" style="--c:#d9487c">
+          <img src="assets/bong-03-bongsun.webp" alt="BONGS 봉순 — 앞치마를 두른 분홍 털 캐릭터" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">정산봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>03</p>
+            <h3>봉순<small>BONGSUN · 정산봇</small></h3>
+            <p>앞치마 주머니에 견적 · 입금 · 미수금을 꼼꼼히 정리합니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h12v16H6z"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 10.5h1.5"/><path d="M12 10.5h3.5"/><path d="M8.5 14h1.5"/><path d="M12 14h3.5"/><path d="M8.5 17.5h1.5"/><path d="M12 17.5h3.5"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>정산<small>견적 · 미수금</small></h3>
-          <p>견적 · 계약 · 입금을 정리하고 미수금을 챙깁니다.</p>
+        <article class="bong" style="--c:#4f8a35">
+          <img src="assets/bong-04-bongdal.webp" alt="BONGS 봉달 — 붓을 든 초록 털 캐릭터" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">메일봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>04</p>
+            <h3>봉달<small>BONGDAL · 메일봇</small></h3>
+            <p>붓을 들고 받은 메일을 요약하고 답장 초안을 씁니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16"/><path d="M9 20v-5h6v5"/><path d="M8 10.5h.01"/><path d="M12 10.5h.01"/><path d="M16 10.5h.01"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>거래처<small>원장 · 연락 기록</small></h3>
-          <p>거래처별 계약과 연락 기록을 한곳에 모읍니다.</p>
+        <article class="bong" style="--c:#7c8f2e">
+          <img src="assets/bong-05-haedongi.webp" alt="BONGS 해동이 — 털모자와 배낭을 멘 캐릭터" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">일정 · 업무봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>05</p>
+            <h3>해동이<small>HAEDONGI · 일정 · 업무봇</small></h3>
+            <p>배낭을 메고 회의 · 마감 · 할 일을 먼저 챙겨 알려 줍니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h16v17H4z"/><path d="M8 8.5l1.6 1.6L12.5 7"/><path d="M8 14.5l1.6 1.6 2.9-3.1"/><path d="M14.5 9h2.5"/><path d="M14.5 15h2.5"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>업무<small>프로젝트 · 할 일</small></h3>
-          <p>프로젝트와 할 일을 나누고 진행을 보고합니다.</p>
+        <article class="bong" style="--c:#b57a4e">
+          <img src="assets/bong-06-todeogi.webp" alt="BONGS 토더기 — 흰 도자기 몸에 노란 부리" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">BONGS 진행</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>06</p>
+            <h3>토더기<small>TODEOGI · BONGS 진행</small></h3>
+            <p>대화방을 진행하며 일을 알맞은 봇에게 넘기고, 승인을 받아 옵니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20h17"/><path d="M5 20V9l7-4.5L19 9v11"/><path d="M8.5 13h3v3h-3z"/><path d="M14 20v-6.5h2.5V20"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>사무실<small>멤버 · 권한</small></h3>
-          <p>멤버와 권한, 다른 사무실과의 연결을 관리합니다.</p>
+        <article class="bong" style="--c:#c9a227">
+          <img src="assets/bong-07-hiphop.webp" alt="BONGS 해동이 힙합 — 선글라스와 골드체인" width="840" height="1120" loading="lazy">
+          <span class="bong-band" aria-hidden="true">마켓봇</span>
+          <div class="bong-txt">
+            <p class="bong-no"><small>NO.</small>07</p>
+            <h3>해동이 HIP-HOP<small>HAEDONGI · 마켓봇</small></h3>
+            <p>봇 마켓에서 분야별 전문가 봇을 찾아 사무실로 데려옵니다.</p>
+          </div>
         </article>
-        <article class="bot">
-          <div class="bot-top"><span class="bot-ico"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 9.5 6 4.5h12l1.5 5"/><path d="M4.5 9.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/><path d="M6 12v7.5h12V12"/><path d="M10 19.5v-4h4v4"/></svg></span><span class="bot-state"><i></i>대기 중</span></div>
-          <h3>마켓<small>봇 데려오기</small></h3>
-          <p>분야별 전문가 봇을 찾아 내 사무실에 들입니다.</p>
+        <article class="bong is-duo" style="--c:#8a6a4a">
+          <img src="assets/bong-08-duo.webp" alt="해동이와 토더기가 나란히 선 모습" width="840" height="1120" loading="lazy">
+          <div class="bong-txt">
+            <p class="bong-no"><small>TOGETHER</small></p>
+            <h3>서로 불러 함께<small>HAEDONGI × TODEOGI</small></h3>
+            <p>맡은 일이 겹치면 봇끼리 서로 불러 한 번에 처리합니다.</p>
+          </div>
         </article>
       </div>
     </section>
@@ -141,9 +177,9 @@
         <p>봇이 준비하고, 사람이 결정합니다. 모든 봇이 같은 순서로 일합니다.</p>
       </div>
       <ol class="flow">
-        <li class="card"><span class="flow-n">1</span><h3>부르기</h3><p>대화방에서 <b>@봇이름</b>으로 일을 맡깁니다. 방에 없는 봇은 BONGS가 불러옵니다.</p></li>
-        <li class="card"><span class="flow-n">2</span><h3>준비</h3><p>봇이 메일 초안 · 일정 · 정산표를 만들어 대화방에 올립니다.</p></li>
-        <li class="card is-key"><span class="flow-n">3</span><h3>승인</h3><p>내용을 보고 <b>승인</b>을 눌러야 보내기 · 등록이 실행됩니다. 고치라고 돌려보낼 수도 있습니다.</p></li>
+        <li class="card"><img class="flow-pic" src="assets/todeogi-call.webp" alt="" width="280" height="230" loading="lazy"><span class="flow-n">1</span><h3>부르기</h3><p>대화방에서 <b>@봇이름</b>으로 일을 맡깁니다. 방에 없는 봇은 토더기가 불러옵니다.</p></li>
+        <li class="card"><img class="flow-pic" src="assets/todeogi-ready.webp" alt="" width="280" height="264" loading="lazy"><span class="flow-n">2</span><h3>준비</h3><p>봇이 메일 초안 · 일정 · 정산표를 만들어 대화방에 올립니다.</p></li>
+        <li class="card is-key"><img class="flow-pic" src="assets/todeogi-ok.webp" alt="" width="280" height="248" loading="lazy"><span class="flow-n">3</span><h3>승인</h3><p>내용을 보고 <b>승인</b>을 눌러야 보내기 · 등록이 실행됩니다. 고치라고 돌려보낼 수도 있습니다.</p></li>
       </ol>
     </section>
 
@@ -203,9 +239,9 @@
 
   <footer class="foot">
     <a class="brand" href="#main"><span class="brand-mark">H</span>HAYZ</a>
-    <p>© <span id="year"></span> HAYDAY · 토덕이와 AI 봇들의 사무실</p>
+    <p>© <span id="year"></span> HAYDAY · 봉패밀리와 함께 일하는 AI 사무실</p>
     <a class="foot-mail" href="mailto:hi@ha-y.day"><svg class="li li-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v11H4z"/><path d="M4.5 7l7.5 6 7.5-6"/></svg>문의 hi@ha-y.day</a>
   </footer>
-  <script src="js/main.js?v=r2"></script>
+  <script src="js/main.js?v=r3"></script>
 </body>
 </html>
