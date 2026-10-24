@@ -1,6 +1,16 @@
 // HAYZ 홈페이지 — 토덕이 테마. 주황 #ff5b21은 버튼·라벨 보조색
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// 다운로드: 최신 릴리스 버전 · 날짜를 GitHub에서 읽어 표시(실패하면 HTML에 적힌 버전 그대로)
+fetch('https://api.github.com/repos/hay-king/hayz-web/releases/latest', { headers: { accept: 'application/vnd.github+json' } })
+  .then(r => (r.ok ? r.json() : null))
+  .then(rel => {
+    if (!rel || !rel.tag_name) return;
+    document.getElementById('appVersion').textContent = rel.tag_name;
+    if (rel.published_at) document.getElementById('appDate').textContent = ' (' + new Date(rel.published_at).toLocaleDateString('ko-KR') + ')';
+  })
+  .catch(() => {});
+
 // 앱 미리보기 사이드바
 const route = document.getElementById('appRoute');
 document.querySelectorAll('.app-side a').forEach(a => a.addEventListener('click', () => {
